@@ -1,3 +1,8 @@
+:root {
+    --primary-color: #F49A45;
+    --secundary-color: #f7e5d8;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -15,6 +20,7 @@ ul, li, ol {
 
 body {
     padding: 0 80px;
+    font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -23,10 +29,44 @@ header {
     height: 60px;
     width: calc(100% - 160px);
     top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+    font-size: 1rem;
+}
+
+header li:hover {
+    background: #FBDDC1;
+    box-shadow: 0 4px 8px #0008; 
+}
+
+.login {
+    height: 48px;
+    width: 120px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--secundary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #F49A45;
+    box-shadow: 0 4px 8px #0008; 
+}
+
+header li {
+    padding: 4px 8px;
+    transition: .5s;
 }
 
 main {
-    background-color: black;
     height: 500px;
 }
 
