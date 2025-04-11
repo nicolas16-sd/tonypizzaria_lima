@@ -1,6 +1,8 @@
 :root {
     --primary-color: #F49A45;
     --secundary-color: #f7e5d8;
+    --default-shadow: 0 4px 8px #0008;
+    --deafault-padding: 0 80px;
 }
 
 * {
@@ -19,22 +21,22 @@ ul, li, ol {
 }
 
 body {
-    padding: 0 80px;
     font-family: "Poppins", sans-serif;
+    background-color: var(--secundary-color);
 }
 
 header {
     position: fixed;
-    background-color: orange;
     height: 60px;
-    width: calc(100% - 160px);
+    width: 100vw;
     top: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: var(--deafault-padding);
 }
 
-header ul {
+header menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,7 +46,7 @@ header ul {
 
 header li:hover {
     background: #FBDDC1;
-    box-shadow: 0 4px 8px #0008; 
+        box-shadow: var(--default-shadow);
 }
 
 .login {
@@ -57,8 +59,8 @@ header li:hover {
     justify-content: center;
     align-items: center;
     gap: 8px;
-    color: #F49A45;
-    box-shadow: 0 4px 8px #0008; 
+    color: #F49A45; 
+    box-shadow: var(--default-shadow);
 }
 
 header li {
@@ -67,10 +69,30 @@ header li {
 }
 
 main {
-    height: 500px;
+}
+
+section {
+    height: 100vh;
+    padding: 0 80px;
+}
+
+.home {
+   background-color: var(--secundary-colors);
+   background-image: url(./img/background.svg);
+   background-repeat: no-repeat;
+   background-position: top right;
+}
+
+.cardapio {
+    background-color: aqua;
+}
+
+.servicos {
+    background-color: green;
 }
 
 footer {
-    background-color: orange;
     height: 526px;
+    background-color: #F07807;
+    ;
 }
