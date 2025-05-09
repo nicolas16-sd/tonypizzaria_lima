@@ -5,18 +5,18 @@
     --default-padding: 0 80px;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit
 }
 
-menu,li,ol{
+menu,li,ol {
     list-style: none;
 }
 
@@ -61,7 +61,7 @@ header li:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8  px;
+    gap: 8px;
 }
 
 span{
@@ -122,9 +122,8 @@ section{
 .pizza {
     position: relative;
     display: flex;
-    align-items: end;
+    flex-direction: column;
     border-radius: 12px;
-    overflow: hidden;
 }
 
 .pizza:hover .add-pizza{
@@ -149,22 +148,53 @@ section{
     z-index: 9;
 }
 
+.overflow {
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
 .container-info {
     height: 36px;
-    width: 100%;
+    width: 261px;
     background-color: #0009;
     position: absolute;
-    bottom: top;
-    transition: .5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: -36px;
+    transition: 0.5s;
     border-radius: 0 0 12px 12px;
     opacity: 69%;
 }
 
 .container-info span:nth-of-type(1) {
-    width: 57px;
-    height: 20px;
-    background-color: var(--primary-color);
+    width: 150px;
+    height: 102px;
     color: white;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    opacity: 1;
+}
+
+.container-info p:nth-of-type(1) {
+    width: 55px;
+    height: 14px;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 4px;
+    opacity: 1;
+    background-color: #f07807;
 }
 
 .pizza:hover .container-info {
