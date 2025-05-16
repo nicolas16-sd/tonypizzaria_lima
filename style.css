@@ -73,10 +73,6 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
-main{
-    
-}
-
 section{
     height: 100vh;
     padding: var(--default-padding);
@@ -207,6 +203,9 @@ section{
 
 .cardapio {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .cardapio-item {
@@ -249,10 +248,10 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
     padding: 8px;
     border-radius: 4px;
     transition: 0.5s;
-    flex-direction: column;
 }
 
 .bebida:hover {
@@ -275,9 +274,104 @@ section{
 }
 
 .servicos{
-    background-color: #f07807;
+    background-color:  #FEF8F2;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding-block: 48px;
+    gap: 32px;
 }
 
-footer{
+.servicos-container {
+   display: flex;
+   justify-content: space-between;
+}
+
+.servicos-itens {
+    width: 400px;
+    height: 500px;
+    border: 4px solid var(--primary-color);
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicos-itens h4 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.servicos-itens p {
+    text-shadow: var(--default-shadow);
+    text-align: center;
+}
+
+footer {
     height: 526px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+    gap: 16px;
+}
+
+.contato.logo {
+    display: grid;
+    place-content: center;
+    padding-top: 0;
+}
+
+.contato h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.contato menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contato li {
+    display: flex;
+    gap: 12px;
+}
+
+.contato p {
+    width: 200px;
+}
+
+.social a {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: grid;
+    place-content: center;
+}
+
+.contatos-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    flex-grow: 1;
+}
+
+.copyright {
+    height: 72px;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    border-top: 2px solid orange;
 }
